@@ -28,7 +28,7 @@ import (
 	"github.com/orionparker33/atlas-portmap/internal/mib"
 	"github.com/orionparker33/atlas-portmap/internal/output"
 	"github.com/orionparker33/atlas-portmap/internal/snmpc"
-	"github.com/orionparker33/atlas-portmap/internal/vendor"
+	"github.com/orionparker33/atlas-portmap/internal/vendordb"
 )
 
 var version = "dev"
@@ -493,7 +493,7 @@ func cmdVendor(args []string, stdout, stderr io.Writer) int {
 		fmt.Fprintln(stderr, "usage: atlas-portmap vendor MAC|sysObjectID ...")
 		return exitUsage
 	}
-	db, err := vendor.Default()
+	db, err := vendordb.Default()
 	if err != nil {
 		fmt.Fprintf(stderr, "atlas-portmap vendor: %v\n", err)
 		return exitFailed

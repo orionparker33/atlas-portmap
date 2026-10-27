@@ -94,12 +94,12 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ================================================================================
-Embedded registry data (internal/vendor/data)
+Embedded registry data (internal/vendordb/data)
 ================================================================================
 MAC address block assignments: IEEE Registration Authority public listings
 (MA-L, MA-M, MA-S, IAB), https://standards-oui.ieee.org/
 SNMP Private Enterprise Numbers: IANA, https://www.iana.org/assignments/enterprise-numbers
-Fetch dates and checksums: internal/vendor/data/SOURCES.txt
+Fetch dates and checksums: internal/vendordb/data/SOURCES.txt
 
 The registry data is not covered by the MIT license of atlas-portmap. It is
 factual assignment data from the registries above, of which only the prefix or

@@ -16,7 +16,7 @@ import (
 	"github.com/orionparker33/atlas-portmap/internal/output"
 	"github.com/orionparker33/atlas-portmap/internal/portmap"
 	"github.com/orionparker33/atlas-portmap/internal/snmpc"
-	"github.com/orionparker33/atlas-portmap/internal/vendor"
+	"github.com/orionparker33/atlas-portmap/internal/vendordb"
 )
 
 // Device is one SNMP agent to query.
@@ -260,7 +260,7 @@ func Run(ctx context.Context, req Request, version string, onEvent func(Event)) 
 		finish(p.local, t0, fmt.Sprintf("%d entries", len(la)), err)
 	}
 
-	db, dbErr := vendor.Default()
+	db, dbErr := vendordb.Default()
 	vendorOf := func(net.HardwareAddr) string { return "" }
 	if dbErr == nil {
 		vendorOf = db.MAC

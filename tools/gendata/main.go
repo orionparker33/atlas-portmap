@@ -1,7 +1,7 @@
-// Command gendata regenerates internal/vendor/data from the public registries: the IEEE MAC
+// Command gendata regenerates internal/vendordb/data from the public registries: the IEEE MAC
 // address blocks (MA-L, MA-M, MA-S and the legacy IAB) and IANA's Private Enterprise Numbers.
 //
-//	go run ./tools/gendata -out internal/vendor/data
+//	go run ./tools/gendata -out internal/vendordb/data
 package main
 
 import (
@@ -40,7 +40,7 @@ const penURL = "https://www.iana.org/assignments/enterprise-numbers.txt"
 var hexPrefix = regexp.MustCompile(`^[0-9A-F]+$`)
 
 func main() {
-	out := flag.String("out", "internal/vendor/data", "output directory")
+	out := flag.String("out", "internal/vendordb/data", "output directory")
 	timeout := flag.Duration("timeout", 2*time.Minute, "per-download timeout")
 	flag.Parse()
 	if err := run(*out, *timeout); err != nil {

@@ -1,6 +1,6 @@
-// Package vendor maps MAC addresses to IEEE-registered organisations and sysObjectIDs to IANA
+// Package vendordb maps MAC addresses to IEEE-registered organisations and sysObjectIDs to IANA
 // Private Enterprise Numbers. The data is embedded; regenerate it with tools/gendata.
-package vendor
+package vendordb
 
 import (
 	"bufio"

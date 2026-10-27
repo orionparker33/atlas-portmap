@@ -307,7 +307,7 @@ make race       # unit tests under the race detector (needs cgo, i.e. a C compil
 make vet        # go vet (including the e2e package) and gofmt
 make e2e        # end-to-end: race-built binary vs snmpsim (needs python3 with venv and PyPI on first run; E2E_NO_RACE=1 builds without -race)
 make dist       # static binaries: linux/amd64, linux/arm64, windows/amd64, windows/arm64, darwin/arm64
-make data       # refresh the embedded IEEE/IANA data (internal/vendor/data/SOURCES.txt records it)
+make data       # refresh the embedded IEEE/IANA data (internal/vendordb/data/SOURCES.txt records it)
 make jscheck    # syntax-check the GUI's ES modules (needs node)
 make gui-demo   # build a demo site report (tools/demoreport) and open it in the GUI
 ```
@@ -326,7 +326,7 @@ screenshots in `docs/img` are the Windows build rendered by headless Edge.
 | `internal/mib` | OID catalogue, row-index decoders, value rendering (control characters never pass through raw) |
 | `internal/collect` | reads one switch (or ARP source); LLDP/CDP decoding and local-port resolution |
 | `internal/portmap` | the join and MAC placement |
-| `internal/vendor` | embedded IEEE OUI / IANA PEN lookups; `tools/gendata` regenerates the data |
+| `internal/vendordb` | embedded IEEE OUI / IANA PEN lookups; `tools/gendata` regenerates the data |
 | `internal/output` | table (terminal-escape safe), JSON, CSV (formula-injection safe) |
 | `internal/inventory`, `internal/localarp` | device lists; OS neighbour caches (Linux, Windows, macOS/BSD) |
 | `e2e` | end-to-end test against snmpsim (`go test -tags e2e`), CLI and GUI |

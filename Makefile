@@ -32,7 +32,7 @@ dist:
 	    sha256sum atlas-portmap-*.zip atlas-portmap-*.tar.gz > SHA256SUMS
 
 data:
-	$(GO) run ./tools/gendata -out internal/vendor/data
+	$(GO) run ./tools/gendata -out internal/vendordb/data
 
 jscheck:
 	@tmp=$$(mktemp -d); cp -r internal/gui/web/js $$tmp/; echo '{"type":"module"}' > $$tmp/package.json; \

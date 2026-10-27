@@ -17,7 +17,7 @@ import (
 	"github.com/orionparker33/atlas-portmap/internal/collect"
 	"github.com/orionparker33/atlas-portmap/internal/output"
 	"github.com/orionparker33/atlas-portmap/internal/portmap"
-	"github.com/orionparker33/atlas-portmap/internal/vendor"
+	"github.com/orionparker33/atlas-portmap/internal/vendordb"
 )
 
 type kind struct {
@@ -41,7 +41,7 @@ var kinds = []kind{
 
 func main() {
 	rng := rand.New(rand.NewSource(7))
-	db, err := vendor.Default()
+	db, err := vendordb.Default()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
