@@ -1,0 +1,9 @@
+# atlas-portmap inventory. One device per line; the header is optional.
+# role: switch (map it) or arp (read its ARP table: routers, L3 switches, firewalls).
+# version/community are optional and fall back to -v / PORTMAP_COMMUNITY.
+# Prefer leaving community empty here and supplying it from the environment.
+role,host,alias,version,community
+switch,10.0.0.2,core,2c,
+switch,10.0.0.3,closet-a,2c,
+switch,10.0.0.4:1161,closet-b,,
+arp,10.0.0.1,edge-router,2c,

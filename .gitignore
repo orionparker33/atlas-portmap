@@ -1,0 +1,9 @@
+/bin/
+/dist/
+/.cache/
+*.test
+*.out
+# local output: maps, walk captures, exports (may hold real network data)
+/*.json
+/*.csv
+/*.txt

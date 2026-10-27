@@ -1,0 +1,9 @@
+Generated 2026-10-27T04:06:28Z by tools/gendata.
+
+https://standards-oui.ieee.org/oui/oui.csv  40407 entries  sha256 8fc2e797509ec908be10be7ca7a36dda608d0ba6113f4bbcb53840476df32b9f
+https://standards-oui.ieee.org/oui28/mam.csv  6655 entries  sha256 48d4466aa26a4abb6fca93ed0645790428008bcea6e688ab225098035c2caca7
+https://standards-oui.ieee.org/oui36/oui36.csv  7247 entries  sha256 74aa788a0d89f05e0d5e98175b766b37756348dc146082f452d78d0cc7335678
+https://standards-oui.ieee.org/iab/iab.csv  4575 entries  sha256 6e71aa3d47f00f19d09cb3b31ce1038de1834703420f0ce4ce111da586f1a533
+https://www.iana.org/assignments/enterprise-numbers.txt  67362 entries  sha256 853bb71ae5efdb47c1faf51547d3cad22891bd4d2a1d93408f1994d9bd1f14b9
+
+oui.tsv.gz: 58881 prefixes; pen.tsv.gz: 67362 enterprises
